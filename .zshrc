@@ -5,6 +5,10 @@
 [[ -f ~/.zsh/wsl2fix.zsh ]] && source ~/.zsh/wsl2fix.zsh
 [[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
 
+
+
+
+
 # Load Starship
 eval "$(starship init zsh)"
 
