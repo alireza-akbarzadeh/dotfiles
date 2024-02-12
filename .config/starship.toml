@@ -2,7 +2,7 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+format = """$os$username$hostname$kubernetes$directory$nodejs$git_branch$git_status$package$ruby$rust$sh$time$character"""
 
 # Drop ugly default prompt characters
 [character]
@@ -16,10 +16,47 @@ format = '[$symbol](bold white) '
 disabled = false
 
 [os.symbols]
-Windows = ' '
-Arch = '󰣇'
-Ubuntu = ''
-Macos = '󰀵'
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+
 
 # ---y
 
@@ -28,19 +65,19 @@ Macos = '󰀵'
 style_user = 'white bold'
 style_root = 'black bold'
 format = '[$user]($style) '
-disabled = false
+disabled = true
 show_always = true
 
 # Shows the hostname
 [hostname]
 ssh_only = false
 format = 'on [$hostname](bold yellow) '
-disabled = false
+disabled = true
 
 # Shows current directory
 [directory]
 truncation_length = 1
-truncation_symbol = '…/'
+truncation_symbol = ''
 home_symbol = '󰋜 ~'
 read_only_style = '197'
 read_only = '  '
@@ -48,11 +85,12 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
-symbol = ' '
-format = 'via [$symbol$branch]($style)'
+symbol = ' '
+format = 'on [$symbol$branch]($style)'
 # truncation_length = 4
 truncation_symbol = '…/'
 style = 'bold green'
+
 
 # Shows current git status
 [git_status]
@@ -75,25 +113,41 @@ deleted = ' '
 format = 'via [󱃾 $context\($namespace\)](bold purple) '
 disabled = false
 
-# ---
-
-[vagrant]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[helm]
-disabled = true
-
-[python]
-disabled = true
+# Shows node version
 
 [nodejs]
-disabled = true
+format = 'via [ $version](bold green) '
+
+# ---
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
 
 [ruby]
-disabled = true
+symbol = " "
 
-[terraform]
-disabled = true
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
