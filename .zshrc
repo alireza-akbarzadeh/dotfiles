@@ -1,14 +1,10 @@
-# Load Antibody plugins
+# Load Antibody plugins used in linux and wsl
 source <(antibody init)
 antibody bundle zsh-users/zsh-autosuggestions
 antibody bundle zsh-users/zsh-syntax-highlighting
 
 
-plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search web-search copyfile docker)
 
 
 # Load Starship
@@ -25,3 +21,12 @@ eval "$(direnv hook zsh)"
 [[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
 
 
+
+
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+# Set PATH For MACOS 
+# export PATH="/bin:/usr/bin:/usr/local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Applications/Postgres.app/Contents/Versions/15/bin:/usr/sbin:$PATH"
+
+# # Initialize Homebrew and Starship
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(starship init zsh)"
