@@ -1,4 +1,3 @@
-# first you need install plugins https://catalins.tech/zsh-plugins/
 
 # Initialize Homebrew and Starship
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -126,24 +125,55 @@ esac
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# npm alias
 alias nrd="npm run dev"
 alias nrb="npm run build"
-alias gs="git status"
-alias gcm="git commit -m"
-alias openzs="open ~/.zshrc"
-alias sourcezs="source ~/.zshrc"
 alias ni="npm install"
 alias nu="npm uninstall"
-alias nr="npm run" 
-alias nrp="npm run prisma:studio" 
+alias nr="npm run"
+alias nrp="npm run prisma:studio"
+# git alias
+alias gs="git status"
+alias gcm="git commit -m"
+alias gsp="git stash pop"
 
-alias workdird='cd $HOME/workdir/Hit/FrontEnd_Monorepo'
-alias workdirq='cd $HOME/workdir/Hit/DartilQ'
-alias workdirt='cd $HOME/workdir/Hit/Test/FrontEnd_Monorepo'
-alias workdirs='cd $HOME/workdir/Hit/Stage/FrontEnd_Monorepo'
 
-alias home='cd ~'
-alias pn='pnpm'
+# nvm alias
+alias nu="nvm use"
+alias nl="nvm list"
+alias ni="nvm install"
+
+alias openzs="open ~/.zshrc"
+alias sourcezs="source ~/.zshrc"
+
+# directory alias
+alias wrd='cd $HOME/workdir/Hit/FrontEnd_Monorepo'
+alias wrq='cd $HOME/workdir/Hit/DartilQ'
+alias wrt='cd $HOME/workdir/Hit/Test/FrontEnd_Monorepo'
+alias wrs='cd $HOME/workdir/Hit/Stage/FrontEnd_Monorepo'
+alias h='cd ~'
+
+# pnpm alias
+
+alias pa='pnpm add'
+alias pr='pnpm remove'
+alias pd='pnpm dev'
+alias pb='pnpm build'
+alias pt='pnpm test'
+alias prs='pnpm run start'
+alias pi='pnpm install'
+
+
+# bun alias
+alias ba='bun add'
+alias br='bun remove'
+alias bd='bun dev'
+alias bb='bun build'
+alias bt='bun test'
+alias brs='bun run start'
+alias bi='bun install'
+# monod alias
 alias mongod="sudo mongod --dbpath /System/Volumes/Data/data/db"
 
 # alias code="open -a 'Visual Studio Code'"
